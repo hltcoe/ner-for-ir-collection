@@ -1,8 +1,0 @@
-2020 Jun 23 Tue 20:56:43 EDT test4 /exp/jbremerman/ner-for-ir-collection/full_collections/chinese  1094  cd chinese/
-2020 Jun 23 Tue 20:56:44 EDT test4 /exp/jbremerman/ner-for-ir-collection/full_collections/chinese  1095  ls
-2020 Jun 23 Tue 20:57:04 EDT test4 /exp/jbremerman/ner-for-ir-collection/full_collections/chinese  1096  pwd
-2020 Jun 23 Tue 20:57:18 EDT test4 /exp/jbremerman/ner-for-ir-collection/full_collections/chinese  1097  ls
-2020 Jun 23 Tue 20:57:24 EDT test4 /exp/jbremerman/ner-for-ir-collection/full_collections/chinese  1098  less qrels 
-2020 Jun 23 Tue 20:57:26 EDT test4 /exp/jbremerman/ner-for-ir-collection/full_collections/chinese  1099  rm qrels 
-2020 Jun 23 Tue 20:57:56 EDT test4 /exp/jbremerman/ner-for-ir-collection/full_collections/chinese  1100  less qrels 
-2020 Jun 23 Tue 20:58:07 EDT test4 /exp/jbremerman/ner-for-ir-collection/full_collections/chinese  1101  git add qrels
