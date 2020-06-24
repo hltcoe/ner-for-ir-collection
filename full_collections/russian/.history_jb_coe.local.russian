@@ -7,3 +7,6 @@
 2020 Jun 23 Tue 23:22:50 EDT test4 /exp/jbremerman/ner-for-ir-collection/full_collections/russian  1113  git push origin master
 2020 Jun 23 Tue 23:23:19 EDT test4 /exp/jbremerman/ner-for-ir-collection/full_collections/russian  1114  git pull
 2020 Jun 23 Tue 23:23:26 EDT test4 /exp/jbremerman/ner-for-ir-collection/full_collections/russian  1115  git push origin master
+2020 Jun 24 Wed 19:48:41 EDT test4 /exp/jbremerman/ner-for-ir-collection/full_collections/russian  1152  cd russian/
+2020 Jun 24 Wed 19:48:41 EDT test4 /exp/jbremerman/ner-for-ir-collection/full_collections/russian  1153  ls
+2020 Jun 24 Wed 19:48:46 EDT test4 /exp/jbremerman/ner-for-ir-collection/full_collections/russian  1154  wc -l qrels
