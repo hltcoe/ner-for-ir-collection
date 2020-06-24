@@ -1,0 +1,9 @@
+2020 Jun 23 Tue 20:58:59 EDT test4 /exp/jbremerman/ner-for-ir-collection/full_collections/russian  1108  cd russian/
+2020 Jun 23 Tue 20:59:00 EDT test4 /exp/jbremerman/ner-for-ir-collection/full_collections/russian  1109  ls
+2020 Jun 23 Tue 20:59:12 EDT test4 /exp/jbremerman/ner-for-ir-collection/full_collections/russian  1110  less qrels 
+2020 Jun 23 Tue 20:59:20 EDT test4 /exp/jbremerman/ner-for-ir-collection/full_collections/russian  1111  git add qrels
+2020 Jun 23 Tue 20:59:29 EDT test4 /exp/jbremerman/ner-for-ir-collection/full_collections/russian  1112  git commit -m "full collection qrels"
+2020 Jun 23 Tue 20:59:37 EDT test4 /exp/jbremerman/ner-for-ir-collection/full_collections/russian  1113  git push origin master
+2020 Jun 23 Tue 23:22:50 EDT test4 /exp/jbremerman/ner-for-ir-collection/full_collections/russian  1113  git push origin master
+2020 Jun 23 Tue 23:23:19 EDT test4 /exp/jbremerman/ner-for-ir-collection/full_collections/russian  1114  git pull
+2020 Jun 23 Tue 23:23:26 EDT test4 /exp/jbremerman/ner-for-ir-collection/full_collections/russian  1115  git push origin master
