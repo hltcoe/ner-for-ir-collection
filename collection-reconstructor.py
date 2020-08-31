@@ -16,9 +16,7 @@ Run with -h flag for usage information.
 os_dir_char = os.path.join("a", "b")[1]
 
 collections = {
-    'clef': {
-        'COLLECTION': 'clef',
-        'LANGUAGE': 'russian',
+    'russian': {
         'SOURCE_ENCODING': 'UTF-8',
         'SOURCE_FILENAME_SUFFIX': ".xml.gz",
         'SOURCE_SPLIT_PATTERN': r"</DOC>\s+<DOC>",
@@ -26,9 +24,7 @@ collections = {
         'SOURCE_TEXT_PATTERN': r"<TEXT>\s*(.*?)\s*</TEXT>",
         'NER_FILENAME_PATTERN': f"([^{os_dir_char}]+)_conf.conll$",
     },
-    'tdt': {
-        'collection': 'tdt',
-        'LANGUAGE': 'chinese',
+    'chinese': {
         'SOURCE_ENCODING': 'gb2312',
         'SOURCE_FILENAME_SUFFIX': ".tkn_sgm",
         'SOURCE_SPLIT_PATTERN': r"</DOC>\s+<DOC>",
@@ -37,10 +33,7 @@ collections = {
         'NER_FILENAME_PATTERN': f"([^{os_dir_char}]+).txt_input_text.sentences.txt.conll_conf.conll$",
     },
 }
-keys = list(collections.keys())
-for key in keys:
-    collections[collections[key]['LANGUAGE']] = collections[key]
-    
+   
 class SourceReconstructor:
 
     def __init__(self, spec, ner_dir, output_dir, tokencol, transduce_fn):
