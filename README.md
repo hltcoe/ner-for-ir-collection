@@ -23,7 +23,7 @@ Because we are not allowed to distribute the documents themselves, the named ent
 
 ### Russian (CLEF)
 
-The Russian collection is available from the ELRA (http://www.clef-initiative.eu/dataset/corpus) as collection LDC2001T58. To recreate the Russian named entity files, do the following:
+The Russian collection is available from the ELRA (http://www.clef-initiative.eu/dataset/corpus) as collection ***FIXME***. To recreate the Russian named entity files, do the following:
 
 * Extract the encoded files using ```tar xfj russian.bz2```. This will create a directory called ```russian``` that contains the encrypted files.
 * Locate your version of the ELRA source collection. Suppose this is in a directory called ```CLEF```.
