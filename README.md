@@ -15,25 +15,40 @@ The collection includes the following components:
 * ```collection-reconstructor.py```: A python script to reconstruct the named entity annotations from source documents
 * ```russian.tar.bz2```: A tarred, compressed directory of encoded named entity files
 
-In both ```full_collections``` and ```expt_collections``, the qrels files are in standard TREC format. The queries files are ***FIXME: JAKE, PLEASE DESCRIBE***
+In both ```full_collections``` and ```expt_collections```, the qrels files are in standard TREC format. The queries files are ***FIXME: JAKE, PLEASE DESCRIBE***
 
 ## Recreating Named Entity Files
 
 Because we are not allowed to distribute the documents themselves, the named entity files must be decrypted using the version of the document collection you have gained legally through other means. 
 
-The Russian collection is available from the Linguistic Data Consortium (https://www.ldc.upenn.edu/) as collection LDC2001T58. To recreate the Russian named entity files, do the following:
+### Russian (CLEF)
 
-* Extract the encoded files using ```tar xfj russian.bz2```. This will create a directory called `russian` that contains the encrypted files.
-* Locate your version of the LDC source collection. Suppose this is in a directory called ```LDC2001T58```.
-* Identify where you want the unencrypted NER files to go; suppose this is a directory called 'russian-ner'.
+The Russian collection is available from the ELRA (http://www.clef-initiative.eu/dataset/corpus) as collection LDC2001T58. To recreate the Russian named entity files, do the following:
+
+* Extract the encoded files using ```tar xfj russian.bz2```. This will create a directory called ```russian``` that contains the encrypted files.
+* Locate your version of the ELRA source collection. Suppose this is in a directory called ```CLEF```.
+* Identify where you want the unencrypted NER files to go; suppose this is a directory called ```russian-ner```.
 * Run the decoding software:
 
 ```
-python collection-reconstructor.py russian LDC2001T58 russian russian-ner
+python collection-reconstructor.py russian CLEF russian russian-ner
 ```
-The resulting files in the ```russian_ner directory are in tab-separated format, with one token per line, and blank lines between sentences. The first column contains the token; the second column contains the named entity tag; and the third column contains the system's confidence value for this tag assignment.
+The resulting files in the ```russian_ner``` directory are in tab-separated format, with one token per line, and blank lines between sentences. The first column contains the token; the second column contains the named entity tag; and the third column contains the system's confidence value for this tag assignment.
 
-The Chinese named entity annotations are not yet available. Please contact ```jamesmayfield@gmail.com``` if you are interested in obtaining them.
+### Chinese (TDT)
+
+The Chinese collection is available from the Linguistic Data Consortium (https://www.ldc.upenn.edu/) as collection LDC2001T58. To recreate the Chinese named entity files, do the following:
+
+* Extract the encoded files using ```tar xfj chinese.bz2```. This will create a directory called ```chinese``` that contains the encrypted files.
+* Locate your version of the LDC source collection. Suppose this is in a directory called ```LDC2001T58```.
+* Identify where you want the unencrypted NER files to go; suppose this is a directory called ```chinese-ner```.
+* Run the decoding software:
+
+```
+python collection-reconstructor.py chinese LDC2001T58 chinese chinese-ner
+```
+The resulting files in the ```chinese_ner``` directory are in tab-separated format, with one token per line, and blank lines between sentences. The first column contains the token; the second column contains the named entity tag; and the third column contains the system's confidence value for this tag assignment.
+
 
 ## Citation
 
