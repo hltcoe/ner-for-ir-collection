@@ -13,7 +13,8 @@ The collection includes the following components:
 * ```full_collections```: The full qrels and queries obtained during annotation
 * ```expt_collections```: The qrels and queries for topic aspects for which there is at least one relevant document (this is the set used in our experiments)
 * ```collection-reconstructor.py```: A python script to reconstruct the named entity annotations from source documents
-* ```russian.tar.bz2```: A tarred, compressed directory of encoded named entity files
+* ```chinese.tar.bz2```: A tarred, compressed directory of encoded Chinese named entity files
+* ```russian.tar.bz2```: A tarred, compressed directory of encoded Russian named entity files
 
 In both ```full_collections``` and ```expt_collections```, the qrels files are in standard TREC format. The queries files are csv files with the following columns:
 
@@ -38,7 +39,7 @@ Because we are not allowed to distribute the documents themselves, the named ent
 
 ### Russian (CLEF)
 
-The Russian collection is available from the ELRA (http://www.clef-initiative.eu/dataset/corpus) as collection ***FIXME***. To recreate the Russian named entity files, do the following:
+The Russian collection is available from the ELRA (http://www.clef-initiative.eu/dataset/corpus). To recreate the Russian named entity files, do the following:
 
 * Extract the encoded files using ```tar xfj russian.bz2```. This will create a directory called ```russian``` that contains the encrypted files.
 * Locate your version of the ELRA source collection. Suppose this is in a directory called ```CLEF```.
