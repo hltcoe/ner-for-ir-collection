@@ -104,8 +104,9 @@ class SourceReconstructor:
 
     def transduce_docs(self, filename):
         openfn = gzip.open if filename.lower().endswith('.gz') else open
+        encoding = self.spec['SOURCE_ENCODING'] if self.transduce_fn == encode else 'utf-8'
         with openfn(filename, 'rb') as infile:
-            docs = infile.read().decode(encoding=self.spec['SOURCE_ENCODING'])
+            docs = infile.read().decode(encoding=encoding)
             for doc in re.split(self.spec['SOURCE_SPLIT_PATTERN'], docs, flags=re.S):
                 self.transduce_doc(doc)
    
