@@ -22,7 +22,7 @@ collections = {
         'SOURCE_SPLIT_PATTERN': r"</DOC>\s+<DOC>",
         'SOURCE_DOCID_PATTERN': r"<DOCNO>\s*(.*?)\s*</DOCNO>",
         'SOURCE_TEXT_PATTERN': r"<TEXT>\s*(.*?)\s*</TEXT>",
-        'NER_FILENAME_PATTERN': f"([^{os_dir_char}]+)_conf.conll$",
+        'NER_FILENAME_PATTERN': f"([^{os_dir_char}]+).conll.txt$",
     },
     'chinese': {
         'SOURCE_ENCODING': 'gb2312',
