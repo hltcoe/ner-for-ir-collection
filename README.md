@@ -15,7 +15,22 @@ The collection includes the following components:
 * ```collection-reconstructor.py```: A python script to reconstruct the named entity annotations from source documents
 * ```russian.tar.bz2```: A tarred, compressed directory of encoded named entity files
 
-In both ```full_collections``` and ```expt_collections```, the qrels files are in standard TREC format. The queries files are ***FIXME: JAKE, PLEASE DESCRIBE***
+In both ```full_collections``` and ```expt_collections```, the qrels files are in standard TREC format. The queries files are csv files with the following columns:
+
+* subtopic_num: The ID used for the topic aspect to match with the qrels
+* subtopic_name: The English description of the topic aspect, usually in the form of a question
+* reg_query: The bag of words, non-NER query in collection language
+* ner_query: The query which does contain at least one named entity tag
+* reg_translation: The English translation of the reg_query
+* ner_translation: The English translation of the ner_query
+
+An NER query term can be expressed in one of or a combination of the following three formats:
+
+* alone: if the term appears alone such as "GPE summit", the term signifies the tag should appear somewhere in the document (a GPE in a document about a summit)
+* | : if the term appears with a "|" character such as "GPE|Washington", the term signifies the tag serves as a constraint on the following term (the term Washington but only used as a GPE, not as a person)
+* / : if the term appears wtih a "/" character such as "GPE/participant summit", the term signifies the tag serves as a broadening of the following term (any GPE that was a participant in a summit)
+
+Another way to think about "|" compared to "/" is that terms with "|" would most definitely like the following term to appear in the document.  For GPE|Washington, "Washington" should surely be in the document.  For terms with "/", the following term may not need to be an exact match in the document.  For GPE/participant summit, you are looking for a GPE that has participated in a summit, you may not be as concerned with the specific term "participant".
 
 ## Recreating Named Entity Files
 
