@@ -39,12 +39,12 @@ Because we are not allowed to distribute the documents themselves, the named ent
 
 ### Russian (CLEF)
 
-The Russian collection is available from the ELRA (http://www.clef-initiative.eu/dataset/corpus). To recreate the Russian named entity files, do the following:
+The Russian collection is available from the ELRA (http://www.clef-initiative.eu/dataset/corpus) as collection ELRA-E0008 or ELRA-E0036. To recreate the Russian named entity files, do the following:
 
 * Extract the encoded files using ```tar xfj russian.bz2```. This will create a directory called ```russian``` that contains the encrypted files.
 * Locate your version of the ELRA source collection. Suppose this is in a directory called ```CLEF```.
 * Identify where you want the unencrypted NER files to go; suppose this is a directory called ```russian-ner```.
-* Run the decoding software:
+* Run the decoding software using Python 3:
 
 ```
 python collection-reconstructor.py russian CLEF russian russian-ner
@@ -58,7 +58,7 @@ The Chinese collection is available from the Linguistic Data Consortium (https:/
 * Extract the encoded files using ```tar xfj chinese.bz2```. This will create a directory called ```chinese``` that contains the encrypted files.
 * Locate your version of the LDC source collection. Suppose this is in a directory called ```LDC2001T58```.
 * Identify where you want the unencrypted NER files to go; suppose this is a directory called ```chinese-ner```.
-* Run the decoding software:
+* Run the decoding software, using Python 3:
 
 ```
 python collection-reconstructor.py chinese LDC2001T58 chinese chinese-ner
